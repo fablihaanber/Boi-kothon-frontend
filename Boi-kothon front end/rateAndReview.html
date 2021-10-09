@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="css/styleRate.css">
+
+  <title>Rate and Review</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="post">
+      <div class="text">রেটিং দেওয়ার জন্য ধন্যবাদ</div>
+      <div class="edit">EDIT</div>
+    </div>
+    <div class="star-widget">
+      <input type="radio" name="rate" id="rate-5">
+      <label for="rate-5" class="fas fa-star"></label>
+      <input type="radio" name="rate" id="rate-4">
+      <label for="rate-4" class="fas fa-star"></label>
+      <input type="radio" name="rate" id="rate-3">
+      <label for="rate-3" class="fas fa-star"></label>
+      <input type="radio" name="rate" id="rate-2">
+      <label for="rate-2" class="fas fa-star"></label>
+      <input type="radio" name="rate" id="rate-1">
+      <label for="rate-1" class="fas fa-star"></label>
+      <form action="#">
+        <header></header>
+        <div class="textarea">
+          <textarea name="" id="sentence" cols="30" placeholder="বই নিয়ে আপনার অভিজ্ঞতা ফুটিয়ে তুলুন......."></textarea>
+
+        </div>
+        <div class="btn">
+          <button type="submit">Post</button>
+        </div>
+      </form>
+
+
+    </div>
+  </div>
+  <script>
+    const btn = document.querySelector("button");
+    const post = document.querySelector(".post");
+    const star = document.querySelector(".star-widget");
+    const editBtn = document.querySelector(".edit");
+    const review = document.querySelector(".sentence");
+
+    btn.onclick = () => {
+      star.style.display = "none";
+      post.style.display = "block";
+
+      editBtn.onclick = () => {
+        star.style.display = "block";
+        post.style.display = "none";
+
+        return false;
+      }
+
+
+    }
+
+
+    // function displayStarValue(star) {
+    //   var star = document.querySelector('.star-widget');
+
+    //   for (i = 0; i < star.length; i++) {
+    //     if (star[i].checked) {
+    //       console.log(star[i].value);
+    //     }
+
+    //   }
+
+    // }
+
+  </script>
+
+</body>
+
+</html>
